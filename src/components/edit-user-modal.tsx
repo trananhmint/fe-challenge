@@ -42,7 +42,7 @@ const EditUserModal: React.FC<EditUserModalProps> = ({ isOpen, onClose, onSave, 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#2c2c2c] text-[#2c2c2c] bg-opacity-50">
       <div className="bg-white p-6 rounded-xl shadow-xl w-full max-w-sm">
         <h2 className="text-xl font-semibold mb-4">Edit User</h2>
         <div className="space-y-4">
