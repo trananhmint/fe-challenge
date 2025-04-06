@@ -142,7 +142,7 @@ const TableUser = () => {
       <th
         style={themeStyle}
       >
-        <div className={`${styleTh}`}>
+        <div className={`${styleTh} ${type === "registerAt" ? "justify-center" : ""}`}>
           {name}
           {
             string ? (
@@ -225,14 +225,15 @@ const TableUser = () => {
                   {sortTh("Name", "name", true)}
                   {sortTh("Balance ($)", "balance", false)}
                   {sortTh("Email", "email", true)}
-                  <th
+                  {sortTh("Date", "registerAt", false)}
+                  {/* <th
                     className={`text-center ${theme === "dark"
                       ? "bg-[#2c2c2c] text-[#fefefe]"
                       : "bg-[#fefefe] text-[#2c2c2c]"
                       }`}
                   >
                     Registration
-                  </th>
+                  </th> */}
                   <th
                     className={`text-center ${theme === "dark"
                       ? "bg-[#2c2c2c] text-[#fefefe]"
@@ -284,7 +285,7 @@ const TableUser = () => {
                       >
                         {formatDate(user.registerAt)}
                         <span
-                          className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2
+                          className={`absolute bottom-full  
                                                 bg-gray-800 text-white text-sm rounded 
                                                 opacity-0 group-hover:opacity-100 transition-opacity 
                                                 whitespace-nowrap z-10  border-b last:border-none border-gray-300 px-3 py-2 ${theme === "dark"
